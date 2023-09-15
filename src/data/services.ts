@@ -2,61 +2,61 @@ export const services = [
     {
         title: 'Baños',
         description: 'Renovación de baños',
-        icon: '../../public/icons/bano.webp'
+        icon: '../files/icons/bano.webp'
     },
     {
         title: 'Cocinas',
         description: 'Diseño de cocinas',
-        icon: '../../public/icons/cocina.webp'
+        icon: '../files/icons/cocina.webp'
     },
     {
         title: 'Puertas',
         description: 'Puertas de calidad',
-        icon: '../../public/icons/puerta.webp'
+        icon: '../files/icons/puerta.webp'
     },
     {
         title: 'Pintura',
         description: 'Expertos en pintura',
-        icon: '../../public/icons/pintura.webp'
+        icon: '../files/icons/pintura.webp'
     },
     {
         title: 'Climatización',
         description: 'Aire acondicionado',
-        icon: '../../public/icons/climatizacion.webp'
+        icon: '../files/icons/climatizacion.webp'
     },
     {
         title: 'Parquet',
         description: 'Suelos de parquet',
-        icon: '../../public/icons/parquet.webp'
+        icon: '../files/icons/parquet.webp'
     },
     {
         title: 'Aluminio',
         description: 'Carpintería de aluminio',
-        icon: '../../public/icons/aluminio.webp'
+        icon: '../files/icons/aluminio.webp'
     },
     {
         title: 'Proyectos',
         description: 'Planificación profesional',
-        icon: '../../public/icons/proyecto.webp'
+        icon: '../files/icons/proyecto.webp'
     },
     {
         title: 'Pladur',
         description: 'Tabiquería en pladur',
-        icon: '../../public/icons/pladur.webp'
+        icon: '../files/icons/pladur.webp'
     },
     {
         title: 'Renders 3D',
         description: 'Visualización 3D',
-        icon: '../../public/icons/3d.webp'
+        icon: '../files/icons/3d.webp'
     },
     {
         title: 'Diseño Personalizado',
         description: 'Diseño a medida',
-        icon: '../../public/icons/diseno.webp'
+        icon: '../files/icons/diseno.webp'
     },
     {
         title: 'Instlación Electrica',
         description: 'Electricidad segura',
-        icon: '../../public/icons/instalacion-electrica.webp'
+        icon: '../files/icons/instalacion-electrica.webp'
     },
 ]
