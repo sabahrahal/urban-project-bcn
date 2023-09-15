@@ -9,6 +9,7 @@ const {title, description, url, image} = Astro.props
     <img
       alt={ title }
       src={ image }
+      loading="lazy"
       class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 rounded-lg"
     />
   
