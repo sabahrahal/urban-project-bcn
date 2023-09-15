@@ -1,0 +1,83 @@
+---
+import Form from "./Form.astro";
+---
+
+<section id="contact" class="my-[8rem]">
+  <header class="text-center mb-10 tracking-widest">
+    <span class="font-mono text-gray-700">¿Buscas un presupuesto?</span>
+    <h2 class="text-3xl font-bold">Contactanos</h2>
+  </header>
+  <div
+    class="container sm:max-w-sm-custom md:max-w-md-custom lg:max-w-md-custom xl:max-w-xl-custom 2xl:max-w-2xl-custom px-2"
+  >
+    <div class="flex flex-col md:flex-row gap-x-10 gap-y-10">
+      <div class="flex flex-col w-100 md:w-1/2">
+        <div class="grid grid-cols-2 gap-y-4">
+          <div>
+            <span class="flex items-center">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 mr-1">
+                <path d="M10.5 18.75a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  d="M8.625.75A3.375 3.375 0 005.25 4.125v15.75a3.375 3.375 0 003.375 3.375h6.75a3.375 3.375 0 003.375-3.375V4.125A3.375 3.375 0 0015.375.75h-6.75zM7.5 4.125C7.5 3.504 8.004 3 8.625 3H9.75v.375c0 .621.504 1.125 1.125 1.125h2.25c.621 0 1.125-.504 1.125-1.125V3h1.125c.621 0 1.125.504 1.125 1.125v15.75c0 .621-.504 1.125-1.125 1.125h-6.75A1.125 1.125 0 017.5 19.875V4.125z"
+                  clip-rule="evenodd"></path>
+              </svg>
+               Teléfonos
+            </span>
+            <span class="font-mono">
+              +34 675 073 033
+              <br />
+               +34 656 621 740
+            </span>
+          </div>
+
+          <div>
+            <span class="flex items-center">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 mr-1">
+                <path
+                  fill-rule="evenodd"
+                  d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                  clip-rule="evenodd"></path>
+              </svg>
+               Ubicación</span
+            >
+            <span class="font-mono">C. Doctor Trueta, 41 <br> 08005 Barcelona</span
+            >
+          </div>
+
+          <div class="col-span-2">
+            <span class="flex items-center">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 mr-1">
+                <path
+                  d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"
+                ></path>
+                <path
+                  d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"
+                ></path>
+              </svg>
+               Correo Electronico
+            </span>
+            <span class="font-mono">administracion@urbanprojectbcn.com</span>
+          </div>
+        </div>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.1912753896568!2d2.191372176739992!3d41.391652271299385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a37e724135fb%3A0xa1ec91f9cba631c1!2sUrban%20Project%20Barcelona%20SL!5e0!3m2!1sen!2ses!4v1694793823454!5m2!1sen!2ses"
+          width="auto"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          class="rounded-lg mt-2"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+      </div>
+
+      <div class="w-100 md:w-1/2">
+        <Form />
+      </div>
+    </div>
+  </div>
+</section>

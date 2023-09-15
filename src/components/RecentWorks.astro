@@ -1,0 +1,50 @@
+---
+import CardRecentWork from "./CardRecentWork.astro";
+---
+
+<section id="jobs" class="mt-[8rem]">
+  <header class="text-center mb-10 tracking-widest">
+    <span class="font-mono text-gray-700">Trabajos recientes</span>
+    <h2 class="text-3xl font-bold">Nuestros projectos</h2>
+  </header>
+
+  <div
+    class="grid grid-cols-1 md:grid-cols-3 gap-2 container sm:max-w-sm-custom md:max-w-md-custom lg:max-w-md-custom xl:max-w-xl-custom 2xl:max-w-2xl-custom"
+  >
+    <div class="md:col-span-1 p-2">
+      <CardRecentWork 
+      title="Baños"
+      description=""
+      url=""
+      image="../../public/projects/banos.webp"
+      />
+    </div>
+
+    <div class="md:col-span-1 p-2">
+      <CardRecentWork 
+      title="Interiores"
+      description=""
+      url=""
+      image="../../public/projects/interiores.webp"
+      />
+    </div>
+
+    <div class="md:col-span-1 p-2">
+      <CardRecentWork 
+      title="Cocinas"
+      description=""
+      url=""
+      image="../../public/projects/cocina.webp"
+      />
+    </div>
+
+    <div class="md:col-span-3 p-2">
+      <CardRecentWork 
+      title="Iluminación LED"
+      description=""
+      url=""
+      image="../../public/projects/luces-led.webp"
+      />
+    </div>
+  </div>
+</section>

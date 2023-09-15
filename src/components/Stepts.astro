@@ -1,0 +1,42 @@
+---
+import CardStepts from "./CardStepts.astro";
+
+---
+
+<section id="stepts" class="mt-[8rem]">
+    <header class="text-center mb-10 tracking-widest">
+        <span class="font-mono text-gray-700">¿Cómo lo hacemos?</span>
+        <h2 class="text-3xl font-bold">Te explicamos el proceso</h2>
+    </header>
+    <div class="container px-2 sm:max-w-sm-custom md:max-w-md-custom lg:max-w-md-custom xl:max-w-xl-custom 2xl:max-w-2xl-custom flex flex-row">
+        <div class="w-full md:w-1/2">
+            <CardStepts
+            number="1"
+            title="Contactanos"
+            content="Cuéntanos que tienes en mente para el proyecto de reforma para tu hogar o negocio"
+            lastContent={false}
+            />
+            <CardStepts
+            number="2"
+            title="Presupuesto"
+            content="Con solo una visita hacemos un presupuesto personalizado y sin compromiso"
+            lastContent={false}
+            />
+            <CardStepts
+            number="3"
+            title="Reforma"
+            content="Nuestros expertos realizaran la reforma para que consigas tu espacio soñado"
+            lastContent={false}
+            />
+            <CardStepts
+            number="4"
+            title="Limpieza"
+            content="Cuidamos desde la limpieza, el orden, el tiempo y la calidad en nuestras obras"
+            lastContent={true}
+            />
+        </div>
+        <div class="hidden md:block md:w-1/2">
+            <img class="object-cover h-full w-full" width="720" height="720" src="../../public/stepts-image.png" alt="¿Cómo lo hacemos?" loading="lazy">
+        </div>
+    </div>
+</section>

@@ -1,0 +1,46 @@
+<nav class="bg-white">
+    <div class="container sm:max-w-sm-custom md:max-w-md-custom lg:max-w-md-custom xl:max-w-xl-custom 2xl:max-w-2xl-custom flex items-center justify-between px-2 md:px-0">
+        <a href="/">
+            <img width="80" height="80" src="../../public/logo-urbanprojectbcn.webp" alt="Logo Urban Project">
+        </a>
+
+        <button id="menu-toggle" class="md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>         
+        </button>
+    
+        <div class="space-x-4 hidden md:flex items-center">
+            <a class="transition hover:text-gray-700/75" href="#stepts">¿Cómo lo hacemos?</a>
+            <a class="transition hover:text-gray-700/75" href="#services">Servicios</a>
+            <a class="transition hover:text-gray-700/75" href="#jobs">Trabajos</a>
+            <a class="transition hover:text-gray-700/75" href="#about-us">¿Quienes Somos?</a>
+            <a class="transition hover:text-gray-700/75" href="#contact">Contacto</a>
+        </div>
+    </div>
+</nav>
+
+<div id="menu" class="lg:hidden hidden bg-white p-4 space-y-4">
+    <a class="block transition hover:text-gray-700/75" href="#stepts">¿Cómo lo hacemos?</a>
+    <a class="block transition hover:text-gray-700/75" href="#services">Servicios</a>
+    <a class="block transition hover:text-gray-700/75" href="#jobs">Trabajos</a>
+    <a class="block transition hover:text-gray-700/75" href="#about-us">¿Quienes Somos?</a>
+    <a class="block transition hover:text-gray-700/75" href="#contact">Contacto</a>
+</div>
+
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    const menuLinks = menu?.querySelectorAll('a');
+
+    menuToggle?.addEventListener('click', () => {
+        menu?.classList.toggle('hidden');
+    }) 
+
+    menuLinks?.forEach((link) => {
+    link.addEventListener('click', (e) => {
+        menu?.classList.toggle('hidden');
+    });
+  });
+</script>

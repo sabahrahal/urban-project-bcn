@@ -1,0 +1,19 @@
+---
+import type { service } from '../interfaces/service';
+
+type Props = service;
+const { title, description, icon } = Astro.props
+---
+<div
+  class="block rounded-lg border-2 border-gray-700 p-4 shadow-sm hover:border-gray-700 hover:ring-1 hover:ring-gray-700 focus:outline-none focus:ring duration-100"
+>
+  <div class="inline-block rounded-lg py-3">
+    <img class="invert" loading="lazy" width="40" height="40" src={ icon } alt={ title }>
+  </div>
+
+  <h2 class="mt-2 font-bold">{ title }</h2>
+
+  <p class="hidden sm:mt-1 sm:block sm:text-xs sm:text-gray-700 font-mono">
+    { description }
+  </p>
+</div>
