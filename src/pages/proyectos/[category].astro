@@ -1,0 +1,86 @@
+---
+import { fetchImages } from "../../APIs/cloudinary";
+import { findProject } from "../../data/projects";
+import Layout from "../../layouts/Layout.astro";
+import HistoryIcon from "./components/HistoryIcon.astro"
+import { projectsData } from "../../data/projects"
+
+export function getStaticPaths() {
+    return [
+        { params: { category: "banos" } },
+        { params: { category: "interiores" } },
+        { params: { category: "cocinas" } },
+        { params: { category: "iluminacion" } },
+    ];
+}
+const { category = "" } = Astro.params;
+const { title, description, categoryId } = findProject(category);
+const images = await fetchImages(categoryId)
+---
+
+<Layout title={title} description={description} author="Sabah Rahal">
+    <section
+        class="container px-2 sm:max-w-sm-custom md:max-w-md-custom lg:max-w-md-custom xl:max-w-xl-custom 2xl:max-w-2xl-custom"
+    >
+        <header class="mb-10 mt-[6rem]">
+            <h1 class="text-5xl font-bold mb-2 tracking-widest">{title}</h1>
+            <p class="font-mono text-gray-700">{description}</p>
+        </header>
+        <div class="mb-5 flex gap-x-12">
+            {
+                projectsData.filter( project => project.category != category )
+                .map( project => <HistoryIcon title={project.title} icon={project.icon} category={project.category}/> )
+            }
+        </div>
+        <div class="grid grid-cols-3 gap-1">
+            {
+                images.map((image) => (
+                    <img
+                        class="rounded aspect-square object-cover cursor-pointer img-feed"
+                        src={image.link}
+                        alt={title}
+                    />
+                ))
+            }
+        </div>
+
+        <div
+            id="modal"
+            class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 justify-center items-center hidden"
+        >
+            <div class="max-w-[90vw] h-auto max-h-[90vh] bg-white p-4 rounded-lg mx-auto">
+                <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                id="closeModal"
+                class="w-4 h-4 md:w-6 md:h-6 hover:text-red-600 duration-150 ms-auto mb-2 cursor-pointer"
+            >
+                <path
+                    fill-rule="evenodd"
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-1.72 6.97a.75.75 0 10-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 101.06 1.06L12 13.06l1.72 1.72a.75.75 0 101.06-1.06L13.06 12l1.72-1.72a.75.75 0 10-1.06-1.06L12 10.94l-1.72-1.72z"
+                    clip-rule="evenodd"></path>
+            </svg>
+                <img id="modal-img" src="" alt="" class="mx-auto max-h-[80vh] max-w-full rounded-lg" />
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<script>
+    const modal = document.getElementById("modal");
+    document.querySelectorAll(".img-feed").forEach((image) => {
+        image.addEventListener("click", () => {
+            const src = image.getAttribute("src");
+            document
+                .getElementById("modal-img")
+                ?.setAttribute("src", src ? src : "");
+            if (modal) {
+                modal.style.display = "flex"
+            };
+        });
+    });
+
+    document.getElementById('closeModal')?.addEventListener("click", () => {
+        if (modal) modal.style.display = 'none';
+    })
+</script>

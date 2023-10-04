@@ -1,0 +1,9 @@
+---
+const { title, icon, category } = Astro.props
+---
+<a href={`/proyectos/${category}`} class="flex flex-col gap-y-2 justify-center items-center">
+    <div class="rounded-full border border-gray-300 p-4 drop-shadow-md">
+        <img class="invert mx-auto" width="40px" height="auto" src={ icon } alt={`Icono de ${title}`}/>
+    </div>
+    <span class="text-sm font-mono">{ title }</span>
+</a>

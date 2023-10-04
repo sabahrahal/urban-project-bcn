@@ -5,7 +5,7 @@ type Props = project;
 const {title, description, url, image} = Astro.props
 ---
 
-<a href={ url } class="group relative block bg-black rounded-lg">
+<a href={ url } class="group relative block bg-black rounded-lg md:max-h-[408px] lg:max-h-[472px]">
     <img
       alt={ title }
       src={ image }
@@ -13,14 +13,14 @@ const {title, description, url, image} = Astro.props
       class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50 rounded-lg"
     />
   
-    <div class="relative p-4 sm:p-6 lg:p-8">
-      <p class="text-sm font-mono uppercase tracking-widest text-gray-200">
-        Proyectos de
+    <div class="relative">
+      <p class="font-mono uppercase tracking-widest text-gray-200 p-4 sm:p-6">
+        Ver catálogo de
       </p>
   
-      <p class="text-xl font-bold text-white sm:text-2xl tracking-widest">{ title }</p>
+      <p class="text-xl font-bold text-white sm:text-3xl tracking-widest px-4 sm:px-6">{ title }</p>
   
-      <div class="mt-32 sm:mt-48 lg:mt-64">
+      <div class="mt-32 sm:mt-48 lg:mt-64 px-4 sm:px-6 pb-4">
         <div
           class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
         >
