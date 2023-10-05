@@ -2,8 +2,16 @@
 const { title, icon, category } = Astro.props
 ---
 <a href={`/proyectos/${category}`} class="flex flex-col gap-y-1 justify-center items-center">
-    <div class="rounded-full border border-gray-300 p-4 drop-shadow-md">
+    <div class="rounded-full border border-gray-300 p-4 drop-shadow-md w-fit">
         <img class="invert mx-auto md:w-[30px]" width="20px" height="auto" src={ icon } alt={`Icono de ${title}`}/>
     </div>
-    <span class="text-xs font-mono">{ title }</span>
+    <span class="text-xs font-mono text-center truncate-custom max-w-[75px]">{ title }</span>
 </a>
+
+<style>
+.truncate-custom {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+}
+</style>
