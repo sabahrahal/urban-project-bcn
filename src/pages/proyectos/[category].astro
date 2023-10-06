@@ -83,4 +83,10 @@ const images = await fetchImages(categoryId)
     document.getElementById('closeModal')?.addEventListener("click", () => {
         if (modal) modal.style.display = 'none';
     })
+
+    window.onclick =  (event) => {
+    if (modal && event.target === modal) {
+      modal.style.display = 'none';
+    }
+  };
 </script>
