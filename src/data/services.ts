@@ -55,8 +55,8 @@ export const services = [
         icon: '/icons/diseno.webp'
     },
     {
-        title: 'Instlación Electrica',
-        description: 'Electricidad segura',
-        icon: '/icons/instalacion-electrica.webp'
+        title: 'Instalaciones',
+        description: 'Agua, gas y electricidad',
+        icon: '/icons/instalaciones.webp'
     },
 ]
